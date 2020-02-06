@@ -1,0 +1,232 @@
+{
+    "version": 6,
+    "entities": [
+        {
+            "entity": {
+                "type": "Project",
+                "id": "0dfea78a-d9f8-4fe9-bb3e-1f2d4abd0879",
+                "name": "Security"
+            },
+            "children": [
+                {
+                    "entity": {
+                        "type": "Request",
+                        "method": {
+                            "requestBody": true,
+                            "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                            "name": "POST"
+                        },
+                        "body": {
+                            "formBody": {
+                                "overrideContentType": true,
+                                "encoding": "application/x-www-form-urlencoded",
+                                "items": []
+                            },
+                            "bodyType": "Text"
+                        },
+                        "uri": {
+                            "query": {
+                                "delimiter": "&",
+                                "items": [
+                                    {
+                                        "enabled": true,
+                                        "name": "grant_type",
+                                        "value": "refresh_token"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "scope",
+                                        "value": "all"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "client_id",
+                                        "value": "client1"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "client_secret",
+                                        "value": "123"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "refresh_token",
+                                        "value": "999e76b4-a53a-4eac-aed5-8e70438d9deb"
+                                    }
+                                ]
+                            },
+                            "scheme": {
+                                "name": "http",
+                                "version": "V11"
+                            },
+                            "host": "localhost",
+                            "path": "/oauth/token"
+                        },
+                        "id": "cc65b06e-e920-43ad-98b7-04fbcb109ea8",
+                        "name": "refresh_token",
+                        "headers": [
+                            {
+                                "enabled": true,
+                                "name": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "entity": {
+                        "type": "Request",
+                        "method": {
+                            "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+                            "name": "DELETE"
+                        },
+                        "body": {
+                            "formBody": {
+                                "overrideContentType": true,
+                                "encoding": "application/x-www-form-urlencoded",
+                                "items": []
+                            },
+                            "bodyType": "Text"
+                        },
+                        "uri": {
+                            "query": {
+                                "delimiter": "&",
+                                "items": [
+                                    {
+                                        "enabled": true,
+                                        "name": "access_token",
+                                        "value": "5827f7b3-1819-4892-87ec-cb23b0d8e586"
+                                    }
+                                ]
+                            },
+                            "scheme": {
+                                "name": "http",
+                                "version": "V11"
+                            },
+                            "host": "localhost",
+                            "path": "/oauth/token"
+                        },
+                        "id": "55c3e6cc-7c84-4517-bd0f-de594011e8ab",
+                        "name": "登出",
+                        "headers": [
+                            {
+                                "enabled": true,
+                                "name": "Authorization",
+                                "value": "Basic Y2xpZW50MToxMjM="
+                            }
+                        ]
+                    }
+                },
+                {
+                    "entity": {
+                        "type": "Request",
+                        "method": {
+                            "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                            "name": "GET"
+                        },
+                        "body": {
+                            "formBody": {
+                                "overrideContentType": true,
+                                "encoding": "application/x-www-form-urlencoded",
+                                "items": []
+                            },
+                            "bodyType": "Text"
+                        },
+                        "uri": {
+                            "query": {
+                                "delimiter": "&",
+                                "items": [
+                                    {
+                                        "enabled": true,
+                                        "name": "access_token",
+                                        "value": "5827f7b3-1819-4892-87ec-cb23b0d8e586"
+                                    }
+                                ]
+                            },
+                            "scheme": {
+                                "name": "http",
+                                "version": "V11"
+                            },
+                            "host": "localhost",
+                            "path": "/admin/test"
+                        },
+                        "id": "34fcdf94-2970-4043-bc60-e9de2b82680d",
+                        "name": "获取资源",
+                        "headers": []
+                    }
+                },
+                {
+                    "entity": {
+                        "type": "Request",
+                        "method": {
+                            "requestBody": true,
+                            "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                            "name": "POST"
+                        },
+                        "body": {
+                            "formBody": {
+                                "overrideContentType": true,
+                                "encoding": "application/x-www-form-urlencoded",
+                                "items": []
+                            },
+                            "bodyType": "Text",
+                            "textBody": "{}"
+                        },
+                        "uri": {
+                            "query": {
+                                "delimiter": "&",
+                                "items": [
+                                    {
+                                        "enabled": true,
+                                        "name": "grant_type",
+                                        "value": "password"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "username",
+                                        "value": "admin"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "password",
+                                        "value": "123"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "scope",
+                                        "value": "all"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "client_id",
+                                        "value": "client1"
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "name": "client_secret",
+                                        "value": "123"
+                                    }
+                                ]
+                            },
+                            "scheme": {
+                                "name": "http",
+                                "version": "V11"
+                            },
+                            "host": "localhost",
+                            "path": "/oauth/token"
+                        },
+                        "id": "3fee89dd-e331-4fb5-9716-f0b3253f73ac",
+                        "name": "请求token",
+                        "headers": [
+                            {
+                                "enabled": true,
+                                "name": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
